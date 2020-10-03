@@ -126,17 +126,6 @@ class Text {
     ctx.closePath();
   }
 }
-var audio = new Audio("1.mp3");
-
-audio.oncanplaythrough = function () {
-  audio.play();
-};
-
-audio.loop = true;
-
-audio.onended = function () {
-  audio.play();
-};
 
 // Game Functions
 function SpawnObstacle() {
@@ -244,7 +233,7 @@ function Update() {
 
   highscoreText.Draw();
 
-  gameSpeed += 0.003;
+  gameSpeed += 0.1;
 }
 
 Start();
